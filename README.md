@@ -1,16 +1,29 @@
-# React + Vite
+# Andi Udom - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio site. It lists my deployed projects with links to the live sites, API docs and source code.
 
-Currently, two official plugins are available:
+Built with React, Vite and Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Projects on the site
 
-## React Compiler
+| Project | What it is | Live |
+| --- | --- | --- |
+| [JobZ](https://github.com/Andirell/capstone-project) | Job board, Next.js + Django REST API | [site](https://my-job-board-delta.vercel.app) / [API](https://jobz-api-a22m.onrender.com/api/jobs/) |
+| [Digital Banking API](https://github.com/Andirell/Banking_Api_Project) | Fintech backend, Django REST Framework | [docs](https://banking-api-project.onrender.com/api/docs/) |
+| [ShopNow](https://github.com/Andirell/ShopNow-Project) | Electronics store, Next.js | [site](https://shop-now-project-six.vercel.app) |
+| [Book API](https://github.com/Andirell/Book-API) | Books and authors REST API | [docs](https://book-api-u50f.onrender.com/) |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run it locally
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Editing content
+
+All text, links and projects are in `src/data.js`. To add a project, copy one of the objects in the `projects` list and change the values. To show a Resume button in the header, put a link in `profile.resumeUrl`.
+
+## Deploying
+
+It's a static site. Build with `npm run build` and publish the `dist` folder.

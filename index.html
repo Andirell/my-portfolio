@@ -4,22 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andi Udom | Full-stack developer</title>
     <meta
       name="description"
-      content="Full-stack developer portfolio built with Python, Django, React, and Tailwind CSS."
+      content="Andi Udom is a full-stack developer in Nigeria building Django REST APIs and React and Next.js frontends. See live projects: JobZ, a digital banking API, ShopNow and a book API."
     />
-    <title>Your Name | Full-Stack Developer</title>
+    <meta property="og:title" content="Andi Udom | Full-stack developer" />
+    <meta
+      property="og:description"
+      content="Django REST APIs and React and Next.js frontends. Live projects in fintech, e-commerce and hiring."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#16182a" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script>
+      // Set the theme before the page draws, so dark mode users don't see a white flash
       ;(() => {
         try {
-          const storedTheme = localStorage.getItem('portfolio-theme')
+          const savedTheme = localStorage.getItem('portfolio-theme')
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-          const theme = storedTheme || (prefersDark ? 'dark' : 'light')
-
+          const theme = savedTheme || (prefersDark ? 'dark' : 'light')
           document.documentElement.classList.toggle('dark', theme === 'dark')
-          document.documentElement.style.colorScheme = theme
         } catch {
-          document.documentElement.style.colorScheme = 'light'
+          // keep the light theme
         }
       })()
     </script>
