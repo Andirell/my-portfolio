@@ -10,14 +10,23 @@ function About() {
           </h2>
           <div className="mt-6 grid max-w-xl gap-5 text-lg leading-8 text-muted">
             <p>
-              I work on both ends of a web app. On the backend I design the models, write the
-              REST API, and handle sign-in, permissions and anything that touches money. On the
-              frontend I build responsive React and Next.js screens that use those APIs.
+              I&apos;m a full-stack developer who builds complete web products, from the first
+              screen a user sees to the database behind it.
             </p>
             <p>
-              I care about the parts users never see but always feel: transfers that cannot
-              half-complete, endpoints that only show you your own data, and pages that still
-              work on a cheap phone.
+              On the frontend, I build fast, responsive interfaces with React, Next.js and
+              Tailwind CSS. I focus on clear layouts, smooth interactions and pages that work
+              just as well on a phone as on a laptop.
+            </p>
+            <p>
+              On the backend, I build secure REST APIs with Python, Django and Django REST
+              Framework. I design the data models, handle authentication and permissions, and
+              deploy services that stay reliable as they grow.
+            </p>
+            <p>
+              Working on both sides means I can take an idea from a rough plan to a live,
+              working product, and when something breaks, I can trace it through the whole
+              stack and fix it at the source.
             </p>
           </div>
         </div>
