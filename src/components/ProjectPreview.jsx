@@ -46,9 +46,15 @@ function SiteList({ heading, lines }) {
 function ProjectPreview({ project }) {
   const preview = project.preview
 
+  // Not every project is deployed yet, so fall back to the GitHub link
+  let link = project.liveUrl
+  if (!link) {
+    link = project.codeUrl
+  }
+
   return (
     <a
-      href={project.liveUrl}
+      href={link}
       target="_blank"
       rel="noreferrer"
       aria-label={`Open ${project.title}`}

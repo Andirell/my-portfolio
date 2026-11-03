@@ -112,6 +112,31 @@ export const projects = [
     },
   },
   {
+    title: 'Engineering CMS',
+    summary:
+      'A website for an engineering company with a staff dashboard behind it. Staff edit projects, blog posts, services, the team page, testimonials and the company profile, and follow up on contact inquiries, without touching code.',
+    kind: 'Full-stack app',
+    frontend:
+      'React and Vite with React Router for the public site and the dashboard, Tailwind CSS, and pages that only show to signed-in staff.',
+    backend:
+      'Django REST Framework with JWT sign-in, four roles (admin, manager, engineer, client) that control who can edit what, image uploads that can be stored on Cloudinary, filtering, and Swagger docs.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Django', 'Django REST Framework', 'JWT', 'Cloudinary'],
+    liveUrl: '',
+    codeUrl: 'https://github.com/Andirell/cms_project',
+    preview: {
+      kind: 'endpoints',
+      address: 'github.com/Andirell/cms_project',
+      endpoints: [
+        ['POST', '/api/token/'],
+        ['GET', '/api/projects/by-slug/{slug}/'],
+        ['GET', '/api/blog/'],
+        ['GET', '/api/company/services/'],
+        ['POST', '/api/company/contact/'],
+        ['GET', '/api/dashboard/summary/'],
+      ],
+    },
+  },
+  {
     title: 'ShopNow',
     summary:
       'An electronics store with category pages, deals, product pages, a cart that survives a page refresh, and a demo checkout.',

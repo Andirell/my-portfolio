@@ -10,6 +10,7 @@ Built with React, Vite and Tailwind CSS.
 | --- | --- | --- |
 | [JobZ](https://github.com/Andirell/capstone-project) | Job board, Next.js + Django REST API | [site](https://my-job-board-delta.vercel.app) / [API](https://jobz-api-a22m.onrender.com/api/jobs/) |
 | [Digital Banking API](https://github.com/Andirell/Banking_Api_Project) | Fintech backend, Django REST Framework | [docs](https://banking-api-project.onrender.com/api/docs/) |
+| [Engineering CMS](https://github.com/Andirell/cms_project) | Company website and staff dashboard, React + Django REST API | code only |
 | [ShopNow](https://github.com/Andirell/ShopNow-Project) | Electronics store, Next.js | [site](https://shop-now-project-six.vercel.app) |
 | [Book API](https://github.com/Andirell/Book-API) | Books and authors REST API | [docs](https://book-api-u50f.onrender.com/) |
 

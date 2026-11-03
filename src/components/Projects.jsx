@@ -31,10 +31,14 @@ function ProjectRow({ project }) {
       <div>
         <p className="flex flex-wrap items-center gap-3 text-sm text-muted">
           <span>{project.kind}</span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-live/40 px-2.5 py-0.5 font-semibold text-live">
-            <span className="size-1.5 rounded-full bg-live" aria-hidden="true"></span>
-            Live
-          </span>
+          {project.liveUrl ? (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-live/40 px-2.5 py-0.5 font-semibold text-live">
+              <span className="size-1.5 rounded-full bg-live" aria-hidden="true"></span>
+              Live
+            </span>
+          ) : (
+            <span className="rounded-full border border-line px-2.5 py-0.5 font-semibold">Code on GitHub</span>
+          )}
         </p>
 
         <h3 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
@@ -67,11 +71,16 @@ function ProjectRow({ project }) {
         </ul>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <ProjectLink href={project.liveUrl} primary>
-            {liveText}
-          </ProjectLink>
+          {project.liveUrl && (
+            <ProjectLink href={project.liveUrl} primary>
+              {liveText}
+            </ProjectLink>
+          )}
           {project.apiUrl && <ProjectLink href={project.apiUrl}>Open the API</ProjectLink>}
-          <ProjectLink href={project.codeUrl}>View code</ProjectLink>
+          {/* Projects that aren't deployed yet use the code link as the main button */}
+          <ProjectLink href={project.codeUrl} primary={!project.liveUrl}>
+            View code
+          </ProjectLink>
         </div>
       </div>
 
@@ -90,7 +99,7 @@ function Projects() {
           Selected work
         </h2>
         <p className="mt-4 text-lg leading-8 text-muted">
-          Four projects, all deployed. Open the live sites and API docs, or read the code on GitHub.
+          Things I've built. Open the live sites and API docs, or read the code on GitHub.
         </p>
       </div>
 
